@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="description" content="Blogs by Umar Qureshi from Thakur College of Engineering">
-	<meta name="keywords" content="dqureshiumar,Laravel,PHP,Blogs,Student,Github,2020,best blogs,best blogger,computer, technology">
+	<meta name="description" content="How to setup virtual environment in windows">
+	<meta name="keywords" content="dqureshiumar,Laravel,PHP,Blogs,Student,Github,2020,best blogs,best blogger,computer, technology, virtualenvironment, python, pip, wrapper, python3, virtualenv, windows">
 	<meta name="author" content="Umar Qureshi">
-	<title>How to connect Django with MySQL | Umar Qureshi | Technology related Blogs</title>
+	<title>Setup Virtual Environment in Python | Umar Qureshi | Technology related Blogs</title>
 	<!-- FAVICON -->
 	<link rel="shortcut icon" type="image/x-icon" href="images/dqureshiumar.png">
 	<!-- GOOGLE FONTS -->
@@ -79,8 +79,8 @@
 	<section class="headings">
 		<div class="text-heading text-center">
 			<div class="container">
-				<h1>How to connect Django with MySQL</h1>
-				<h2><a href='/blogs/'>Home </a> &nbsp;/&nbsp; How to connect Django with MySQL</h2>
+				<h1>Setup Virtual Environment in Python</h1>
+				<h2><a href='/blogs/'>Home </a> &nbsp;/&nbsp; Setup Virtual Environment in Python</h2>
 			</div>
 		</div>
 	</section>
@@ -95,12 +95,12 @@
 						<div class="col-md-12 mb-5">
 							<div class="single-blog-post">
 								<div class="blog-list img-box">
-									<img src="images/djangomysql/djangomysql.jpg" alt>
+									<img src="images//virtualenv/python-virtualenv.jpg" alt>
 									<div class="overlay">
 										<div class="box">
 											<div class="content">
 												<ul>
-													<li><a href="connect-django-with-mysql.html"><i class="fa fa-link"></i></a></li>
+													<li><a href="/blogs/setup-virtual-env-in-python.html"><i class="fa fa-link"></i></a></li>
 												</ul>
 											</div>
 										</div>
@@ -110,68 +110,66 @@
 									.fontt {
 										font-size: larger;
 									  }
+
+
 									  
 								</style>
 								<div class="blog-info">
-									<a href="#"><h2 class="mb-2">Connecting our Django Project to MySQL</h2></a>
+									<a href="#"><h2 class="mb-2">Using the Package Virtual Environment Wrapper to setup Virtual Environment</h2></a>
 									<strong><a href="http://dqureshiumar001.000webhostapp.com" style="color:black"><p>by Umar Qureshi</p></a></strong>
 									<br>
-									<strong><p style="font-size:24px ;">To connect MySQL as a database in our Django Project we need to install <a href="https://github.com/dqureshiumar/django-mysql-app/blob/master/mysqlclient-1.4.6-cp38-cp38-win32.whl">MYSQLCLIENT</a> </p></strong> <br>
+									<strong><p style="font-size:30px ;">Prerequisite: You nned to have python and pip installed on your Machine</p></strong> <br>
+									<br>
+									<p style="font-size: 26px">
+										Virtualenvwrapper is a set of extensions to Ian Bicking’s virtualenv tool. <br>The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies.	
+									</p>
+									<br>
+									<br>
+									<h3 style="color:black">Features</h3>
+									<ol>
+
+										<li class="fontt">Organizes all of your virtual environments in one place.</li>
+										<li class="fontt">Wrappers for managing your virtual environments (create, delete, copy).</li>
+										<li class="fontt">Use a single command to switch between environments.</li>
+										<li class="fontt">Tab completion for commands that take a virtual environment as argument.</li>
+										<li class="fontt">User-configurable hooks for all operations (see Per-User Customization).</li>
+										<li class="fontt">Plugin system for creating more sharable extensions (see Extending Virtualenvwrapper).</li>
+
+									</ol>
+									<hr><br>
+									<hr>
+
+									<h3 style="color:black">Below are the Steps to setup a Virtual Environment in python</h3>
 									<ul>
-										<li><p class="fontt">Download the file from the above provided link or go to <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient">Click Here</a></p></li><br>
+										<li><p class="fontt">Use the command <strong>"pip install virtualenvwrapper-win"</strong></p></li><br>
 
-										<li><p class="fontt">Open the path in your command prompt where you have downloaded the file</p></li><br>
+										<li><p class="fontt">After successfully downloading the package use the command to make a new virtual environment :
+											<br>
+											<strong>mkvirtualenv nameofyourvirtualenv <br>(eg:- mkvirtualenv test)</strong> <br><br>
+											<img src="images/virtualenv/virtualenv.jpg" alt="Virtual Environment">
+										</p></li><br>
 
-										<li>
-											<p class="fontt">Run pip install mysqlclient-1.4.6-cp38-cp38-win32.whl <br>
-											<strong><small>Note : if you are using virtual environment so install it under your virtual environment</small></strong> <br>
-											<small> 
-												<a href="/blogs/setup-virtual-env-in-python.html">Check how to setup virtual environment in python</a></small>
-											</p>
-										</li><br>
+										<li><p class="fontt">To Deactivate your virtual environment use following command : <br><strong>"deactivate nameofyourvirtualenv"</strong><br>Example : deactivate test</p></li><br>
 
-										<li><p class="fontt">If you are using XAMPP Server start the Apache Server and MySQL</p>
-										<img src="images/djangomysql/xampp.PNG" alt="Xampp Server">
-
-										<strong><p>Note down the port number on which Mysql Server is running. In my case it's 3306</p></strong>
-										</li>
-										<br><br>
-										<li>
-											<p class="fontt">Go to your Django Project's settings.py file</p>
-											<img src="images/djangomysql/django-tree.PNG" alt="Django Project Skeleton" width=100 height=100>
-										</li>
-
-										<br><br>
-										<li>
-											<p class="fontt">
-												Create a Database in your MySQL
-											</p>
-											<img src="images/djangomysql/emptydatabase.PNG" alt="Creating a new Database">
-										</li>
-										<br><br>
-										<li>
-
-											<p class="fontt">In the Databases change your database configuration to this :</p>
-											<img src="images/djangomysql/databaseconfig.PNG" alt="Database Configuration">
-
-										</li>
-										<br><br>
-										<li>
-
-											<p class="fontt">Run <strong>"python manage.py makemigrations"</p></strong>
-										</li>
-										<br><br>
-										<li>
-
-											<p class="fontt">Run <strong>"python manage.py migrate"</strong> <br>You can see your tables getting migrated to your database</p>
-											<img src="images/djangomysql/migratedtables.PNG" alt="Tables after running migrate command">
-										</li>
-
-										<br><br>
-										<li>
-											<p class="fontt">Thus by following these steps we can Connect our Django Project to MySQL using MYSQLCLIENT. If any queries you can get back to dqureshiumar@gmail.com.<br>Hope you liked it.<br>Thank You.</p>
+										<li><p class="fontt">To Reacitvate your Virtual Environment you need to run the following command<br>
+											<strong>workon nameofyourvirtualenv</strong>
+											<br>Example : workon test
 										</li>
 									</ul>
+									
+									<br>
+									<hr>
+									<br>
+									<hr>
+									<p class="fontt">
+										Once your Virtual Environment is successfully setup you can install the desired packages under that virtual environment and on deactivating it keeps the packages isolated from the other versions and also from the Operating system.
+										<br>
+										<hr>
+										<br>
+										If any queries you can get back to dqureshiumar@gmail.com. <br>
+										Hope you liked it. <br>
+										Thank You. <br>
+									</p>
 
 								</div>
 							</div>
@@ -232,22 +230,21 @@
 									<p>Mar 20, 2020</p>
 								</div>
 							</div>
-							<div class="recent-main my-4">
+							<!-- <div class="recent-main my-4">
 								<div class="recent-img">
-									<a href="/blogs/setup-virtual-env-in-python.html"><img src="images/virtualenv/python-virtualenv.jpg" alt></a>
+									<a href="/blogs/setup-virtual-env-in-python.html"><img src="images/blog/b-2.jpg" alt></a>
 								</div>
 								<div class="info-img">
-									<a href="/blogs/setup-virtual-env-in-python.html"><h6>Setting Up....</h6></a>
-									<p>Mar 21, 2020</p>
+									<a href="/blogs/setup-virtual-env-in-python.html"><h6>Real Estate</h6></a>
+									<p>May 10, 2018</p>
 								</div>
 							</div>
-
-							<!--<div class="recent-main no-mb">
+							<div class="recent-main no-mb">
 								<div class="recent-img">
-									<a href="blog-details.html"><img src="images/blog/b-3.jpg" alt></a>
+									<a href="/blogs/setup-virtual-env-in-python.html"><img src="images/blog/b-3.jpg" alt></a>
 								</div>
 								<div class="info-img">
-									<a href="blog-details.html"><h6>Real Estate</h6></a>
+									<a href="/blogs/setup-virtual-env-in-python.html"><h6>Real Estate</h6></a>
 									<p>May 10, 2018</p>
 								</div>
 							</div> -->
