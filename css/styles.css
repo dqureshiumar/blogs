@@ -248,7 +248,7 @@ img {
   -webkit-transition: all .5s ease;
   transition: all .5s ease; }
 
-.social-icons-header .fa-facebook {
+.social-icons-header {
   color: #fff; }
 
 .social-icons-header .fa-twitter {
@@ -2388,7 +2388,7 @@ section.team {
 @media screen and (max-width: 767px) {
   .team .pb-none {
     padding-bottom: 2.5rem; } }
-.team .team-pro .fa.fa-facebook {
+.team .team-pro {
   background: #3b5998; }
 
 .team .team-pro .fa.fa-twitter {
@@ -3201,12 +3201,11 @@ input {
 
 .first-footer .netsocials a .fa-facebook {
   background: #3b5998;
-  color: #fff;
+
   border: 1px dotted #3b5998; }
 
 .first-footer .netsocials a .fa-facebook:hover {
-  background: #3b5998;
-  color: #fff; }
+  background: #3b5998; }
 
 .first-footer .netsocials a .fa-twitter {
   background: #1da1f2;

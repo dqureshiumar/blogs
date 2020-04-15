@@ -1,0 +1,81 @@
+Payment URL :
+Please Replace the data according to your project requirement
+
+
+//////////////////////////Payment User Interface//////////////////////////
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Payment Demo</title>
+</head>
+<body>
+    <a class="dropdown-item" href="pay/<pass your product ID>">Pay with Instamojo</a>
+</body>
+</html>
+
+
+//////////////////////////Payment URL//////////////////////////
+public function pay($id){
+ 
+        $api = new \Instamojo\Instamojo(
+               config('services.instamojo.api_key'),
+               config('services.instamojo.auth_token'),
+               config('services.instamojo.url')
+        );
+        global $idd;
+        $idd = $id;
+        $properties = DB::table('properties')->where('id', $id)->get();
+        $purpose = "Featured Property";
+        $amount  = 500;
+
+       try {
+           $response = $api->paymentRequestCreate(array(
+                    "purpose" => $purpose,
+                    "amount" => $amount,
+                    "buyer_name" => Auth::user()->name,
+                    "send_email" => true,
+                    "email" => Auth::user()->email,
+                    "redirect_url" => "http://127.0.0.1:8000/pay-success/$id/"
+            ));
+                
+            header('Location: ' . $response['longurl']);
+            exit();
+        }catch (Exception $e) {
+            print('Error: ' . $e->getMessage());
+        }
+    }
+
+//////////////////////////////////////Success URL//////////////////////////////////////
+
+
+public function success($id){
+         
+        try {
+    
+            $api = new \Instamojo\Instamojo(
+                config('services.instamojo.api_key'),
+                config('services.instamojo.auth_token'),
+                config('services.instamojo.url')
+            );
+        
+            $response = $api->paymentRequestStatus(request('payment_request_id'));
+        
+            if( !isset($response['payments'][0]['status']) ) {
+                dd('payment failed');
+            } else if($response['payments'][0]['status'] != 'Credit') {
+                dd('payment failed');
+            }
+            $properties = DB::table('properties')->where('id', $id)->get();
+            $row = DB::table('properties')
+            ->where('id', $properties[0]->id)
+            ->update(['featured' => 1],['payment-id' => $response]);
+            return redirect('/submit-property');
+        }catch (\Exception $e) {
+            return ($e);
+            dd('payment failed');
+        }
+        dd($response);
+    }

@@ -5,11 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="description" content="Blogs by Umar Qureshi from Thakur College of Engineering">
-	<meta name="keywords"
-		content="dqureshiumar,Laravel,PHP,Blogs,Student,Github,2020,best blogs,best blogger,computer, technology">
+	<meta name="description" content="How to Integrate Instamojo Payment Gateway in Laravel">
+	<meta name="keywords" content="dqureshiumar,Laravel,Instamojo,Github,2020,best blogs,best blogger,computer">
 	<meta name="author" content="Umar Qureshi">
-	<title>How to connect Django with MySQL | Umar Qureshi | Technology related Blogs</title>
+	<title>How to Integrate Instamojo Payment Gateway in Laravel | Umar Qureshi | Technology related Blogs</title>
 	<!-- FAVICON -->
 	<link rel="shortcut icon" type="image/x-icon" href="images/dqureshiumar.png">
 	<!-- GOOGLE FONTS -->
@@ -26,7 +25,6 @@
 </head>
 
 <body class="inner-pages">
-
 	<!-- START SECTION HEADINGS -->
 	<div class="header">
 		<div class="header-top">
@@ -70,8 +68,7 @@
 
 				<nav id="main-menu" class="collapse">
 					<ul>
-						<!-- END COLLAPSE MOBILE MENU -->
-						<li><a href="/blogs/">Home</a></li>
+						<li><a href="/blogs/">&laquo;&nbsp;&nbsp;Home</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -81,8 +78,8 @@
 	<section class="headings">
 		<div class="text-heading text-center">
 			<div class="container">
-				<h1>How to connect Django with MySQL</h1>
-				<h2><a href='/blogs/'>Home </a> &nbsp;/&nbsp; How to connect Django with MySQL</h2>
+				<h1>Integrate Instamojo Payment Gateway in Laravel</h1>
+				<h2><a href='/blogs/'>Home </a> &nbsp;/&nbsp; Integrate Instamojo Payment Gateway in Laravel</h2>
 			</div>
 		</div>
 	</section>
@@ -97,13 +94,12 @@
 						<div class="col-md-12 mb-5">
 							<div class="single-blog-post">
 								<div class="blog-list img-box">
-									<img src="images/djangomysql/djangomysql.jpg" alt>
+									<img src="images/instamojo-laravel/instamojo-wallpaper.jpeg" alt>
 									<div class="overlay">
 										<div class="box">
 											<div class="content">
 												<ul>
-													<li><a href="connect-django-with-mysql.html"><i
-																class="fa fa-link"></i></a></li>
+													<li><a href=""><i class="fa fa-link"></i></a></li>
 												</ul>
 											</div>
 										</div>
@@ -112,99 +108,107 @@
 								<style>
 									.fontt {
 										font-size: larger;
+										color: black;
 									}
 								</style>
 								<div class="blog-info">
 									<a href="#">
-										<h2 class="mb-2">Connecting our Django Project to MySQL</h2>
+										<h2 class="mb-2">Integrate a free payment gateway in Laravel using simple steps
+										</h2>
 									</a>
 									<strong><a href="http://dqureshiumar001.000webhostapp.com" style="color:black">
 											<p>by Umar Qureshi</p>
 										</a></strong>
 									<br>
 									<strong>
-										<p style="font-size:24px ;">To connect MySQL as a database in our Django Project
-											we need to install <a
-												href="https://github.com/dqureshiumar/django-mysql-app/blob/master/mysqlclient-1.4.6-cp38-cp38-win32.whl">MYSQLCLIENT</a>
-										</p>
+										<p style="font-size:30px ;">Instamojo is a free payment gateway that provide
+											safe transactions through your own customized website</p>
 									</strong> <br>
-									<ul>
-										<li>
-											<p class="fontt">Download the file from the above provided link or go to <a
-													href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient">Click
-													Here</a></p>
-										</li><br>
-
-										<li>
-											<p class="fontt">Open the path in your command prompt where you have
-												downloaded the file</p>
-										</li><br>
-
-										<li>
-											<p class="fontt">Run pip install mysqlclient-1.4.6-cp38-cp38-win32.whl <br>
-												<strong><small>Note : if you are using virtual environment so install it
-														under your virtual environment</small></strong> <br>
-												<small>
-													<a href="/blogs/setup-virtual-env-in-python.html">Check how to setup
-														virtual environment in python</a></small>
-											</p>
-										</li><br>
-
-										<li>
-											<p class="fontt">If you are using XAMPP Server start the Apache Server and
-												MySQL</p>
-											<img src="images/djangomysql/xampp.PNG" alt="Xampp Server">
-
-											<strong>
-												<p>Note down the port number on which Mysql Server is running. In my
-													case it's 3306</p>
-											</strong>
+									<br>
+									<h3 style="color:black">
+										Steps to get your API credentials:
+									</h3>
+									<ol>
+										<li class="fontt">For Test Payment Gateway visit <a
+												href="https://test.instamojo.com">https://test.instamojo.com</a>
 										</li>
+										<li class="fontt">For Live Payment Gateway visit <a
+												href="https://instamojo.com">https://instamojo.com</a>
+										</li>
+										<li class="fontt">Register and Login</li>
+										<li class="fontt">You will be redirected to Dashboard</li>
+										<li class="fontt">Click on <a href="https://test.instamojo.com/integrations"
+												target="blank">API and Plugins</a></li>
+										<li class="fontt">Note the API key and Auth Token</li>
+									</ol>
+									<img src="images/instamojo-laravel/API.png" alt="Instamojo API Key">
+									<hr><br>
+									<hr>
+									<h2 style="color:black; text-align:center">Start Integrating</h2>
+									<br><br>
+									<h3 style="color:black">1. Installation and Setup</h3>
+									<ol>
+
+										<li class="fontt">Now as we have our API credentials we are all set to integrate
+											it in our Web Application</li>
+										<li class="fontt">You need to make sure you have composer in your machine. If
+											not install <a href="">composer</a></li>
+										<li class="fontt">After installing composer go to your Laravel project and
+											install
+											Instamojo API using :<br>
+											<strong>composer install instamojo-php</strong></li>
+										<li class="fontt">You will see our instamojo is succesfully installed in
+											composer.json</li><br><br>
+										<img src="images/instamojo-laravel/composer-json.jpg"
+											alt="Composer.json Image"><br><br>
+
+										<li class="fontt">Now, after successfully installing Instamojo-Php using
+											composer place your API keys in the <strong>.env</strong> file that is
+											present in your Laravel Project</li>
 										<br><br>
-										<li>
-											<p class="fontt">Go to your Django Project's settings.py file</p>
-											<img src="images/djangomysql/django-tree.PNG" alt="Django Project Skeleton"
-												width=100 height=100>
-										</li>
+										<img src="images/instamojo-laravel/envfile.jpg"><br><br>
+										<p>Note : If you are using test API keys, so you need to specify the
+											<strong>IM_URL</strong>. If working with live keys remove the
+											<strong>IM_URL</strong></p>
 
+									</ol>
+									<hr><br>
+									<hr>
+									<h3 style="color:black">2. Integration with code</h3>
+									<ol class="fontt">
+										<li>Make a Laravel Blade Page and add a link to redirect it to the Payment URL
+										</li><br><br>
+										<img src="images/instamojo-laravel/bladepage.jpg"><br><br>
+										Code :
+										<img src="images/instamojo-laravel/blade-code.jpg"><br><br>
+										<li>Make a Controller PayContoller. you can use the command :<br><u>php artisan
+												make:controller PayController</u></li>
+										<li>Make a function that redirects you to the Payment Website</li><br><br>
+										<img src="images/instamojo-laravel/pay.jpg" alt="Instamojo Payment Redirect">
+										<a href="sourcecode/sourcecode.txt">Get the source code of the code here
+										</a><br><br>
+										<li>We also need to make a success URL for redirecting and error handling and if
+											there is any data that has to be stored as a result.</li>
 										<br><br>
-										<li>
-											<p class="fontt">
-												Create a Database in your MySQL
-											</p>
-											<img src="images/djangomysql/emptydatabase.PNG"
-												alt="Creating a new Database">
-										</li>
+										<img src="images/instamojo-laravel/success-url.jpg"
+											alt="Instamojo Payment Successful">
+										<a href="sourcecode/sourcecode.txt">Get the source code of the code here </a>
 										<br><br>
-										<li>
+										<li>Paste your project data that you have to store or handle during the time of
+											payment</li>
 
-											<p class="fontt">In the Databases change your database configuration to this
-												:</p>
-											<img src="images/djangomysql/databaseconfig.PNG"
-												alt="Database Configuration">
+										<a href="sourcecode/sourcecode.txt">Get the source code of the code here </a>
+									</ol>
 
-										</li>
-										<br><br>
-										<li>
 
-											<p class="fontt">Run <strong>"python manage.py makemigrations"</p></strong>
-										</li>
-										<br><br>
-										<li>
 
-											<p class="fontt">Run <strong>"python manage.py migrate"</strong> <br>You can
-												see your tables getting migrated to your database</p>
-											<img src="images/djangomysql/migratedtables.PNG"
-												alt="Tables after running migrate command">
-										</li>
-
-										<br><br>
-										<li>
-											<p class="fontt">Thus by following these steps we can Connect our Django
-												Project to MySQL using MYSQLCLIENT. If any queries you can get back to
-												dqureshiumar@gmail.com.<br>Hope you liked it.<br>Thank You.</p>
-										</li>
-									</ul>
+									<br>
+									<p>
+										If any queries you can get back to <a
+											href="mailto:dqureshiumar@gmail.com">dqureshiumar@gmail.com</a> <br>
+										Hope you liked it. <br>
+										Thank You. <br>
+									</p>
 
 								</div>
 							</div>
@@ -234,11 +238,12 @@
 						<div class="recent-post">
 							<h5 class="font-weight-bold mb-4">Popular Tags</h5>
 							<div class="tags">
-								<span><a href="#" class="btn btn-outline-primary">Django</a></span>
-								<span><a href="#" class="btn btn-outline-primary">Python</a></span>
+								<span><a href="https://laravel.com/" class="btn btn-outline-primary">Laravel</a></span>
+								<span><a href="https://www.instamojo.com/"
+										class="btn btn-outline-primary">Instamojo</a></span>
 							</div>
 							<div class="tags">
-								<span><a href="#" class="btn btn-outline-primary">Database</a></span>
+								<span><a href="#" class="btn btn-outline-primary">Integration</a></span>
 								<span><a href="#" class="btn btn-outline-primary">MySQL</a></span>
 							</div>
 							<div class="tags">
@@ -247,7 +252,8 @@
 							</div>
 							<div class="tags">
 								<span><a href="#" class="btn btn-outline-primary">Blogs</a></span>
-								<span><a href="#" class="btn btn-outline-primary">SQL</a></span>
+								<span><a href="https://www.instamojo.com/"
+										class="btn btn-outline-primary">PHP</a></span>
 							</div>
 							<!-- <div class="tags">
 								<span><a href="#" class="btn btn-outline-primary">Location</a></span>
@@ -268,20 +274,16 @@
 									<p>Mar 20, 2020</p>
 								</div>
 							</div>
-							<div class="recent-main my-4">
+							<!-- <div class="recent-main my-4">
 								<div class="recent-img">
-									<a href="/blogs/setup-virtual-env-in-python.html"><img
-											src="images/virtualenv/python-virtualenv.jpg" alt></a>
+									<a href="blog-details.html"><img src="images/blog/b-2.jpg" alt></a>
 								</div>
 								<div class="info-img">
-									<a href="/blogs/setup-virtual-env-in-python.html">
-										<h6>Setting Up....</h6>
-									</a>
-									<p>Mar 21, 2020</p>
+									<a href="blog-details.html"><h6>Real Estate</h6></a>
+									<p>May 10, 2018</p>
 								</div>
 							</div>
-
-							<!--<div class="recent-main no-mb">
+							<div class="recent-main no-mb">
 								<div class="recent-img">
 									<a href="blog-details.html"><img src="images/blog/b-3.jpg" alt></a>
 								</div>
@@ -412,17 +414,17 @@
 						</div>
 						<ul class="netsocials">
 							<li><a href="https://www.facebook.com/dqureshiumar12"><i
-										style="background:transparent;border:2px;color:white;border-color:white"
-										class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										style="background:transparent;border:2px;color:white" class="fa fa-facebook"
+										aria-hidden="true"></i></a></li>
 							<li><a href="https://github.com/dqureshiumar"><i
-										style="background:transparent;border:2px;color:white;border-color:white"
-										class="fa fa-github" aria-hidden="true"></i></a></li>
+										style="background:transparent;border:2px;color:white" class="fa fa-github"
+										aria-hidden="true"></i></a></li>
 							<li><a href="https://www.linkedin.com/in/umar-qureshi-a633b5151/"><i
-										style="background:transparent;border:2px;color:white;border-color:white"
-										class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+										style="background:transparent;border:2px;color:white" class="fa fa-linkedin"
+										aria-hidden="true"></i></a></li>
 							<li><a href="https://www.instagram.com/_umar_qureshi_/"><i
-										style="background:transparent;border:2px;color:white;border-color:white"
-										class="fa fa-instagram" aria-hidden="true"></i></a></li>
+										style="background:transparent;border:2px;color:white" class="fa fa-instagram"
+										aria-hidden="true"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -437,7 +439,6 @@
 			</div>
 		</div>
 	</footer>
-
 
 	<a data-scroll href="#heading" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
 	<!-- END FOOTER -->
