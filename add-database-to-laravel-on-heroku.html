@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="Blogs by Umar Qureshi from Thakur College of Engineering">
+	<meta name="keywords"
+		content="dqureshiumar,PHP,Blogs,Student,Github,2020,best blogs,best blogger,computer, technology,Laravel,Heroku">
+	<meta name="author" content="Umar Qureshi">
+	<title>Add Database to a Laravel App on Heroku | Umar Qureshi | Technology related Blogs</title>
+	<!-- FAVICON -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/dqureshiumar.png">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:600,800" rel="stylesheet">
+	<!-- FONT AWESOME -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- ARCHIVES CSS -->
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/lightcase.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" id="color" href="css/default.css">
+</head>
+
+<body class="inner-pages">
+
+	<!-- START SECTION HEADINGS -->
+	<div class="header">
+		<div class="header-top">
+			<div class="container">
+				<div class="top-info hidden-sm-down">
+					<!-- <div class="call-header">
+						<p><i class="fa fa-phone" aria-hidden="true"></i> (234) 0200 17813</p>
+					</div> -->
+					<div class="address-header">
+						<p><i class="fa fa-map-marker" aria-hidden="true"></i> Mumbai, India</p>
+					</div>
+					<div class="mail-header">
+						<p><i class="fa fa-envelope" aria-hidden="true"></i> dqureshiumar@gmail.com</p>
+					</div>
+				</div>
+				<div class="top-social hidden-sm-down">
+					<div class="social-icons-header">
+						<div class="social-icons">
+							<a style="color:white" href="https://www.facebook.com/dqureshiumar12"><i
+									class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="https://www.linkedin.com/in/umar-qureshi-a633b5151/"><i class="fa fa-linkedin"
+									aria-hidden="true"></i></a>
+							<a style="color:white" href="https://github.com/dqureshiumar"><i class="fa fa-github"
+									aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom heading sticky-header" id="heading">
+			<div class="container">
+				<a href class="logo">
+					<img src="images/dqureshiumar.png" alt="dqureshiumar">
+				</a>
+				<button type="button" class="button-menu hidden-lg-up" data-toggle="collapse" data-target="#main-menu"
+					aria-expanded="false">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</button>
+
+
+
+				<nav id="main-menu" class="collapse">
+					<ul>
+						<!-- END COLLAPSE MOBILE MENU -->
+						<li><a href="/blogs/">Home</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<section class="headings">
+		<div class="text-heading text-center">
+			<div class="container">
+				<h1>Add Database to a Laravel App on Heroku</h1>
+				<h2><a href='/blogs/'>Home </a> &nbsp;/&nbsp; Add Database to a Laravel App on Heroku</h2>
+			</div>
+		</div>
+	</section>
+	<!-- END SECTION HEADINGS -->
+
+	<!-- START SECTION BLOG -->
+	<section class="blog">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 col-md-12 blog-pots">
+					<div class="row">
+						<div class="col-md-12 mb-5">
+							<div class="single-blog-post">
+								<div class="blog-list img-box">
+									<img src="images/laravel-heroku/heroku-post.png" alt="Laravel Heroku">
+									<div class="overlay">
+										<div class="box">
+											<div class="content">
+												<ul>
+													<li><a href="publish-laravel-app-on-heroku.html"><i
+																class="fa fa-link"></i></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<style>
+									.fontt {
+										font-size: larger;
+									}
+								</style>
+								<div class="blog-info">
+									<a href="#">
+										<h2 class="mb-2">Add Database to Laravel on Heroku</h2>
+									</a>
+									<strong><a href="http://dqureshiumar001.000webhostapp.com" style="color:black">
+											<p>by Umar Qureshi</p>
+										</a></strong>
+									<br>
+										<p style="font-size:24px ;">Heroku supports PostGres Sql for Laravel App 
+                                        </p>
+									<ul>
+										<li>
+                                            <p class="fontt">Go to your Heroku App on the heroku website and locate the resources tab.</p>
+                                        </li><br>
+                                        <li>
+                                            <p class="fontt">In the Add-Ons textbox select <strong>Heroku PostGres</strong></p>
+                                        </li><br>
+                                        <img src="images/laravel-heroku/Heroku-postgres.png" alt="dqureshiumar">
+                                        <br><br>
+                                        <li>
+                                            <p class="fontt">Select a plan and Click on Provision</p>
+                                        </li><br>
+                                        <li>
+                                            <p class="fontt">Thus we have created a Database on Heroku</p>
+                                        </li><br>
+
+										<li>
+											<p class="fontt">Now, Under your Laravel App on your machine, open Terminal / Command Prompt and run :- <br><strong>heroku pg:credentials:url</strong> 
+                                            </p>
+                                            <br>
+                                            <img src="images/laravel-heroku/database-step.jpg" alt="Database Local">
+                                        </li><br>
+                                        
+                                        <li>
+											<p class="fontt">You will get your database credentials.</p>
+										</li><br>
+
+										<li>
+											<p class="fontt">Add our .env vars to our Laravel Application using command line statements
+                                                <br>EG : heroku config:add DB_CONNECTION=pgsql</p>
+										</li><br>
+										<p class="fontt">Add all the database credentials using "heroku: config add" command</p>
+										<br><br>
+										<li>
+											<p class="fontt">As we add our database credentials to our Heroku Application. Now we have to migrate our App to heroku server</p>
+											<p class="fontt"><strong>heroku run php artisan migrate</strong></p>
+
+										</li>
+
+										<br><br>
+										<li>
+											<p class="fontt">
+												Now we have to create a new app on Heroku<br>
+												Use the command <strong>heroku create</strong>
+											</p>
+											<img src="images/laravel-heroku/heroku-create.jpg"
+												alt="Heroku Create">
+										</li>
+										<br><br>
+										<li>
+											<p class="fontt">Push your Laravel Webapp to heroku server using the command:<br>
+											<strong>git push heroku master</strong>
+											</p>
+                                        </li>
+                                        <br><br>
+                                        <li>
+                                            <p class="fontt">
+                                                Cross check by running your Laravel Application that all your database queries are working fine for you.
+                                            </p>
+                                        </li>
+                                        <br><br>
+										<li>
+											<p class="fontt">Thus by following these steps we can Host our Laravel Webapp on Heroku. If any queries you can get back to
+												dqureshiumar@gmail.com.<br>Hope you liked it.<br>Thank You.</p>
+										</li>
+									</ul>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<aside class="col-lg-3 col-md-12">
+					<div class="widget">
+						<!-- <h5 class="font-weight-bold mb-4">Search</h5>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search for...">
+							<span class="input-group-btn">
+                            <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </span>
+						</div> -->
+						<!-- <div class="recent-post py-5">
+							<h5 class="font-weight-bold">Category</h5>
+							<ul>
+								<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>House</a></li>
+								<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Garages</a></li>
+								<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Real Estate</a></li>
+								<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Real Home</a></li>
+								<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Bath</a></li>
+								<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Beds</a></li>
+							</ul>
+						</div> -->
+						<div class="recent-post">
+							<h5 class="font-weight-bold mb-4">Popular Tags</h5>
+							<div class="tags">
+								<span><a href="https://laravel.com/" class="btn btn-outline-primary">Laravel</a></span>
+								<span><a href="http://heroku.com/" class="btn btn-outline-primary">Heroku</a></span>
+							</div>
+							<div class="tags">
+								<span><a href="#" class="btn btn-outline-primary">Database</a></span>
+								<span><a href="https://www.postgresql.org/" class="btn btn-outline-primary">PostGres</a></span>
+							</div>
+							<div class="tags">
+								<span><a href="#" class="btn btn-outline-primary">Web-App</a></span>
+								<span><a href="#" class="btn btn-outline-primary">Dynamic</a></span>
+							</div>
+							<div class="tags">
+								<span><a href="https://www.php.net/" class="btn btn-outline-primary">PHP</a></span>
+								<span><a href="#" class="btn btn-outline-primary">SQL</a></span>
+							</div>
+							<!-- <div class="tags">
+								<span><a href="#" class="btn btn-outline-primary">Location</a></span>
+								<span><a href="#" class="btn btn-outline-primary">Price</a></span>
+							</div> -->
+						</div>
+						<div class="recent-post pt-5">
+							<h5 class="font-weight-bold mb-4">Recent Posts</h5>
+							<div class="recent-main">
+								<div class="recent-img">
+									<a href="/blogs/publish-laravel-app-on-heroku.html"><img
+											src="images/laravel-heroku/laravel-heroku.jpg" alt></a>
+								</div>
+								<div class="info-img">
+									<a href="/blogs/publish-laravel-app-on-heroku.html">
+										<h6>Heroku Laravel...</h6>
+									</a>
+									<p>May 17, 2020</p>
+								</div>
+							</div>
+							<div class="recent-main my-4">
+								<div class="recent-img">
+									<a href="/blogs/setup-virtual-env-in-python.html"><img
+											src="images/virtualenv/python-virtualenv.jpg" alt></a>
+								</div>
+								<div class="info-img">
+									<a href="/blogs/setup-virtual-env-in-python.html">
+										<h6>Setting Up....</h6>
+									</a>
+									<p>Mar 21, 2020</p>
+								</div>
+							</div>
+
+							<!--<div class="recent-main no-mb">
+								<div class="recent-img">
+									<a href="blog-details.html"><img src="images/blog/b-3.jpg" alt></a>
+								</div>
+								<div class="info-img">
+									<a href="blog-details.html"><h6>Real Estate</h6></a>
+									<p>May 10, 2018</p>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</section>
+	<!-- END SECTION BLOG -->
+
+	<!-- START SECTION NEWSLETTER -->
+	<!-- <section class="subscribe">
+		<div class="realhome_subscribe">
+			<div class="realhome container">
+				<h2>Subscribe for Our Newsletter</h2>
+				<div class="row align-center">
+					<div class="col-lg-6 col-md-6">
+						<form class="realhome_form_subscribe mailchimp form-inline" method="post">
+							<input type="email" id="subscribeEmail" name="EMAIL" class="form_email" placeholder="Enter Your Email">
+							<button type="submit" value="Subscribe">Submit</button>
+							<label for="subscribeEmail" class="error"></label>
+							<p class="subscription-success"></p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+	<!-- END SECTION NEWSLETTER -->
+
+	<!-- START FOOTER -->
+	<!-- START FOOTER -->
+	<footer class="first-footer">
+		<div class="top-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="netabout">
+							<a href class="logo">
+								<img src="images/dqureshiumar.png" alt="dqureshiumar" style="width: 70px; height:70px">
+							</a>
+							<p>I am an Information Technology student, currently pursuing my Bachelor's in Engineering
+								from Thakur College of Engineering.</p>
+							<a href="http://dqureshiumar001.000webhostapp.com" class="btn btn-secondary">Know
+								More...</a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="navigation">
+							<h3>Quick Links</h3>
+							<div class="nav-footer">
+								<ul>
+									<li><a href="/blogs/connect-django-with-mysql.html">How to connect Django to
+											MySql</a></li>
+									<li><a href="/blogs/instamojo-integration-laravel.html">Instamojo Integration in
+											Laravel</a></li>
+									<li><a href="https://github.com/dqureshiumar">Mini Projects</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="col-lg-3 col-md-6">
+						<div class="widget">
+							<h3>Twitter Feeds</h3>
+							<div class="twitter-widget contuct">
+								<div class="twitter-area">
+									<div class="single-item">
+										<div class="icon-holder">
+											<i class="fa fa-twitter" aria-hidden="true"></i>
+										</div>
+										<div class="text">
+											<h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
+											<h4>about 5 days ago</h4>
+										</div>
+									</div>
+									<div class="single-item">
+										<div class="icon-holder">
+											<i class="fa fa-twitter" aria-hidden="true"></i>
+										</div>
+										<div class="text">
+											<h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
+											<h4>about 5 days ago</h4>
+										</div>
+									</div>
+									<div class="single-item">
+										<div class="icon-holder">
+											<i class="fa fa-twitter" aria-hidden="true"></i>
+										</div>
+										<div class="text">
+											<h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
+											<h4>about 5 days ago</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> -->
+					<div class="col-lg-3 col-md-6">
+						<div class="contactus">
+							<h3>Contact Us</h3>
+							<ul>
+								<li>
+									<div class="info">
+										<i class="fa fa-map-marker" aria-hidden="true"></i>
+										<p class="in-p">Mumbai, India</p>
+									</div>
+								</li>
+								<li>
+									<div class="info">
+										<i class="fa fa-linkedin" aria-hidden="true"></i>
+										<p class="in-p"><a href="https://www.linkedin.com/in/umar-qureshi-a633b5151/"
+												style="color:white">Connect</a></p>
+									</div>
+								</li>
+								<li>
+									<div class="info">
+										<i class="fa fa-envelope" aria-hidden="true"></i>
+										<p class="in-p ti">dqureshiumar@gmail.com</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<ul class="netsocials">
+							<li><a href="https://www.facebook.com/dqureshiumar12"><i
+										style="background:transparent;border:2px;color:white;border-color:white"
+										class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="https://github.com/dqureshiumar"><i
+										style="background:transparent;border:2px;color:white;border-color:white"
+										class="fa fa-github" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/umar-qureshi-a633b5151/"><i
+										style="background:transparent;border:2px;color:white;border-color:white"
+										class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.instagram.com/_umar_qureshi_/"><i
+										style="background:transparent;border:2px;color:white;border-color:white"
+										class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="second-footer">
+			<div class="container">
+				<p>
+					<script>	document.write(new Date().getFullYear())</script> © Copyright - All Rights Reserved.</p>
+				<p>Made With <i class="fa fa-heart" aria-hidden="true"></i> By <a style="color:white"
+						href="http://dqureshiumar001.000webhostapp.com">Umar Qureshi</a></p>
+			</div>
+		</div>
+	</footer>
+
+
+	<a data-scroll href="#heading" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+	<!-- END FOOTER -->
+	<!--Style Switcher===========================================-->
+
+	<!-- ARCHIVES JS -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/tether.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/smooth-scroll.min.js"></script>
+	<script src="js/ajaxchimp.min.js"></script>
+	<script src="js/newsletter.js"></script>
+	<script src="js/inner.js"></script>
+</body>
+
+</html>
